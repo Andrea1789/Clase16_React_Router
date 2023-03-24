@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Card from "./components/Card"
-import { Outlet } from 'react-router-dom'
+import Card from "../components/Card"
 
 const Home = () => {
   const [beers, setBeers] = useState([])
@@ -14,12 +13,11 @@ const Home = () => {
 
   useEffect(()=>{
     getBeers()
-  })
+  },[])
 
   return (
     <>
-     <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center'}}>
-        <Outlet/>
+     <div >
         </div>
     <div className='grid'>
         {beers.length ? beers.map(beer => (
